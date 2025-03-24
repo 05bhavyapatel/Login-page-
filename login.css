@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.left-container {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+}
+.header img {
+    height: 5vh;
+    margin-right: 0.1vw;
+}
+.header-title {
+    font-size: 2vh;
+    font-weight: bold;
+}
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+.welcome-text {
+    font-size: 3vh;
+    margin-bottom: 1vh;
+}
+.subtitle {
+    font-size: 1.8vh;
+    color: gray;
+    margin-bottom: 2vh;
+}
+label {
+    font-size: 1.6vh;
+    font-weight: bold;
+    display: block;
+    margin-top: 2vh;
+}
+input{
+    width: 100%;
+    height: 5vh;
+    padding: 1vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5vh;
+}
+.country,
+.state,
+.city{
+    width: 100%;
+    height: 5vh;
+    padding: 1vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5vh;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 2vh;
+    font-size: 1.6vh;
+    width: 100%;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw; 
+    font-weight: bold;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 1.5vh;
+    height: 1.5vh;
+    margin: 0; 
+}
+
+.forgot-password {
+    color: blueviolet;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1.6vh; 
+}
+.btn {
+    width: 100%;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8vh;
+    margin-top: 2vh;
+}
+.primary-btn {
+    background-color: blueviolet;
+    color: white;
+}
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.google-btn img {
+    width: 2vh;
+    margin-right: 1vw;
+}
+.signup-text {
+    font-size: 1.6vh;
+    text-align: center;
+    margin-top: 2vh;
+}
+.signup-text a {
+    color: blue;
+    text-decoration: none;
+}
+.right-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(167, 140, 221, 255);
+}
+.right-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .right-container {
+        display: none;
+    }
+    .left-container {
+        flex: 1;
+        padding: 5vh 10vw;
+    }
+    .header{
+        display: flex;
+    }
+}
+/* Style for the Check Button */
+.add-btn, .check-btn {
+    display: inline-block;
+}

@@ -1,0 +1,117 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a78cdd, #8A2BE2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #FFD700;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+.details-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/*Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/*Row*/
+tr {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+/* Label Styling */
+td:first-child {
+    font-weight: bold;
+    color: #FFD700;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Value Styling */
+td:last-child {
+    color: #eee;
+    text-align: left;
+}
+
+/* Animation */
+td {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Sequential appearance */
+tr:nth-child(1) td { animation-delay: 0.5s; }
+tr:nth-child(2) td { animation-delay: 1s; }
+tr:nth-child(3) td { animation-delay: 1.5s; }
+tr:nth-child(4) td { animation-delay: 2s; }
+tr:nth-child(5) td { animation-delay: 2.5s; }
+
+/* Fade in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Slide in effect */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 85%;
+        padding: 20px;
+    }
+    td {
+        font-size: 16px;
+    }
+}

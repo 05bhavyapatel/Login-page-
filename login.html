@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+    <script src="save-user.js"></script>
+    <script src="user-details.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <header class="header">
+                <img src="logo.png" alt="Logo">
+                <p class="header-title">TheCubeFactory</p>
+            </header>
+            
+            <div class="form-container">
+                <h2 class="welcome-text">Welcome back</h2>
+                <p class="subtitle">Please enter your details</p>
+
+                <form action="#" method="POST">
+                    <label for="email">Email Address</label>
+                    <input class="class1" type="email" id="email1" placeholder="Enter your email" required>
+                    <p id="error-message-email" style="color: rgb(232, 37, 37); display: none;font-size: 9px;">
+                        Email must have @.
+                    </p>
+                
+                    <label for="password">Password</label>
+                    <input class="class1" type="password" id="password1" placeholder="Enter your password" required>
+                    <p id="error-message-password" style="color: rgb(224, 34, 34); display: none;font-size: 9px;">
+                        Password must be at least 8 characters long and contain at least one special character.
+                    </p>
+
+                    <label for="country">Country</label>
+                    <select class="form-select country" id="country1" onchange="loadStates()" required>
+                        <option value="" selected>Select Country</option>
+                    </select>
+                
+                    <label for="state">State</label>
+                    <select class="form-select state" id="state1" onchange="loadCities()" required>
+                        <option value="" selected>Select State</option>
+                    </select>
+                
+                    <label for="city">City</label>
+                    <select class="form-select city" id="city1" required>
+                        <option value="" selected>Select City</option>
+                    </select>
+                
+                    <div class="checkbox-container">
+                        <div style="display: flex; justify-content: left;">
+                            <input type="checkbox" id="remember-me">
+                            <p style="margin-left: 0.2vw;">Remember for 30 days</p>
+                        </div>
+                        <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                    </div>
+                
+                    <button type="button" class="btn primary-btn" id="sign-in">Sign In</button>
+                
+                    <button type="button" class="btn add-btn">
+                        Add
+                    </button>
+                    <!-- check button -->
+                    <button type="button" class="btn check-btn">Check</button>
+
+                    <p class="signup-text">
+                        Don't have an account? <a href="sign-up.html">Sign up</a>
+                    </p>
+                </form>
+                <div id="user-table"></div>
+            </div>
+        </div>
+        <!-- right div -->
+        <div class="right-container">
+            <img src="image1.png" alt="Illustration">
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
